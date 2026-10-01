@@ -587,6 +587,111 @@ h2 {
 
 }
 
+/* =========================
+   INFORMACIÓN CLASIFICADA
+   ========================= */
+
+.classified-info {
+  margin-top: 35px;
+  padding: 25px 18px;
+
+  background:
+    rgba(0, 0, 0, .28);
+
+  border:
+    1px dashed #494039;
+}
+
+.classified-title {
+  color: var(--bright-red);
+
+  font-size: 13px;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 10px;
+}
+
+.classified-subtitle {
+  color: var(--grey);
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  margin-bottom: 25px;
+}
+
+.classified-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.classified-item {
+  display: flex;
+
+  gap: 15px;
+
+  text-align: left;
+
+  padding: 17px;
+
+  background:
+    rgba(255, 255, 255, .025);
+
+  border:
+    1px solid rgba(255, 255, 255, .07);
+}
+
+.classified-icon {
+  font-size: 25px;
+  flex-shrink: 0;
+}
+
+.classified-label {
+  color: var(--white);
+
+  font-size: 13px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 7px;
+}
+
+.classified-text {
+  color: var(--grey);
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+/* SECRETO */
+
+.classified-item.secret {
+  border-color:
+    rgba(143, 17, 17, .65);
+
+  background:
+    rgba(100, 0, 0, .08);
+}
+
+.secret-warning {
+  margin-top: 13px;
+
+  color: var(--bright-red);
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  letter-spacing: 1px;
+
+  font-weight: bold;
+}
+
 
 /* =========================
    ACCESIBILIDAD
