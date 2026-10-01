@@ -1,12 +1,23 @@
-const inicio = document.getElementById("inicio");
-const invitacion = document.getElementById("invitacion");
-const destino = document.getElementById("destino");
+const inicio =
+  document.getElementById("inicio");
 
-const entrar = document.getElementById("entrar");
-const huir = document.getElementById("huir");
+const invitacion =
+  document.getElementById("invitacion");
+
+const destino =
+  document.getElementById("destino");
+
+const entrar =
+  document.getElementById("entrar");
+
+const huir =
+  document.getElementById("huir");
 
 const mensajeHuir =
   document.getElementById("mensajeHuir");
+
+const ghostEscape =
+  document.getElementById("ghostEscape");
 
 const verDestino =
   document.getElementById("verDestino");
@@ -24,137 +35,258 @@ const destinoTexto =
   document.getElementById("destinoTexto");
 
 
-/* =========================
-   POSIBLES DESTINOS
-   ========================= */
+/* ========================================
+   DESTINOS
+   ======================================== */
 
 const destinos = [
 
   {
     icono: "👑",
-    titulo: "FINAL GIRL",
+
+    titulo:
+      "FINAL GIRL",
+
     texto:
       "Contra todo pronóstico, sobrevivís. " +
-      "Vas a tener que explicar qué pasó... " +
-      "aunque probablemente nadie te crea."
+      "Viste cosas que nadie debería haber visto " +
+      "y ahora vas a tener que explicar qué pasó. " +
+      "El problema es que probablemente nadie te crea."
   },
+
 
   {
     icono: "🩸",
-    titulo: "MORÍS PRIMERO",
+
+    titulo:
+      "MORÍS PRIMERO",
+
     texto:
-      "Alguien tenía que investigar ese ruido extraño. " +
-      "Felicitaciones: fuiste vos."
+      "Alguien escuchó un ruido extraño " +
+      "y decidió ir a investigar. " +
+      "Felicitaciones: ese alguien eras vos."
   },
+
 
   {
     icono: "🔪",
-    titulo: "VOS ERAS EL ASESINO",
+
+    titulo:
+      "VOS ERAS EL ASESINO",
+
     texto:
-      "Plot twist. Nadie sospechó de vos. " +
-      "O por lo menos eso querés creer."
+      "Plot twist. " +
+      "Mientras todos intentaban descubrir " +
+      "qué estaba pasando, vos ya sabías la respuesta."
   },
+
 
   {
     icono: "👻",
-    titulo: "SOBREVIVÍS, PERO NADIE TE CREE",
+
+    titulo:
+      "SOBREVIVÍS, PERO NADIE TE CREE",
+
     texto:
       "Viste todo. Escapaste. " +
-      "El problema es que tu historia " +
-      "suena completamente absurda."
+      "Tenés la historia completa. " +
+      "Lástima que suena absolutamente imposible."
   },
+
 
   {
     icono: "🧟",
-    titulo: "TE CONVERTÍS EN ZOMBIE",
+
+    titulo:
+      "TE CONVERTÍS EN ZOMBIE",
+
     texto:
       "Técnicamente no sobrevivís. " +
-      "Pero tampoco podemos decir " +
-      "que moriste del todo."
+      "Pero tampoco podemos afirmar " +
+      "que hayas muerto del todo. " +
+      "Lo consideraremos un empate."
   },
+
 
   {
     icono: "🕵️",
-    titulo: "SOS EL SOSPECHOSO PRINCIPAL",
+
+    titulo:
+      "SOS EL SOSPECHOSO PRINCIPAL",
+
     texto:
-      "No sabemos qué hiciste, " +
-      "pero estabas demasiado tranquilo " +
-      "cuando desapareció el primero."
+      "No tenemos pruebas. " +
+      "Pero estabas demasiado tranquilo " +
+      "cuando desapareció el primero. " +
+      "Eso no ayuda."
   },
+
 
   {
     icono: "🏃",
-    titulo: "SOBREVIVÍS POR COBARDE",
+
+    titulo:
+      "SOBREVIVÍS POR COBARDE",
+
     texto:
       "Mientras todos investigaban " +
-      "el ruido del sótano, " +
+      "el ruido que venía del sótano, " +
       "vos ya estabas a seis cuadras. " +
-      "Una decisión excelente."
+      "La cobardía también salva vidas."
   },
+
 
   {
     icono: "😈",
-    titulo: "ESTABAS POSEÍDO",
+
+    titulo:
+      "ESTABAS POSEÍDO",
+
     texto:
-      "Esas cosas raras que hiciste " +
-      "durante la noche ahora tienen explicación. " +
-      "Más o menos."
+      "Esas cosas extrañas que hiciste " +
+      "durante la noche finalmente tienen explicación. " +
+      "Bueno... algunas."
   },
+
 
   {
     icono: "🧛",
-    titulo: "TERMINÁS SIENDO VAMPIRO",
+
+    titulo:
+      "TERMINÁS SIENDO VAMPIRO",
+
     texto:
-      "La noche termina, pero para vos " +
-      "parece que recién empieza. " +
+      "Para todos los demás la noche termina. " +
+      "Para vos parece que recién empieza. " +
       "Esperemos que nadie haya comido ajo."
   },
 
+
   {
     icono: "📞",
-    titulo: "RECIBÍS LA LLAMADA",
+
+    titulo:
+      "RECIBÍS LA LLAMADA",
+
     texto:
       "Suena el teléfono. " +
-      "Atendés. Una voz pregunta " +
-      "cuál es tu película de terror favorita. " +
-      "Tal vez era mejor no responder."
+      "Atendés. Una voz pregunta cuál es " +
+      "tu película de terror favorita. " +
+      "Tal vez era mejor dejarlo sonar."
   },
+
 
   {
     icono: "🪦",
-    titulo: "VOLVÉS DE LA MUERTE",
+
+    titulo:
+      "VOLVÉS DE LA MUERTE",
+
     texto:
       "Todos estaban bastante seguros " +
       "de que habías muerto. " +
-      "Evidentemente no vieron suficientes " +
-      "películas de terror."
+      "Evidentemente no vieron " +
+      "suficientes películas de terror."
   },
 
+
   {
-    icono: "😶",
-    titulo: "DESAPARECÉS MISTERIOSAMENTE",
+    icono: "✨",
+
+    titulo:
+      "SOS QUIEN ROMPE LA MALDICIÓN",
+
     texto:
-      "Nadie vio qué pasó. " +
-      "Nadie escuchó nada. " +
-      "Solo quedó tu vaso sobre la mesa."
+      "Nadie sabe muy bien cómo lo hiciste. " +
+      "Quizás fue valentía. Quizás suerte. " +
+      "Quizás simplemente tocaste " +
+      "el botón correcto."
+  },
+
+
+  {
+    icono: "🐈‍⬛",
+
+    titulo:
+      "TENÉS NUEVE VIDAS",
+
+    texto:
+      "Todo indicaba que no llegabas " +
+      "al final de la noche. " +
+      "Pero de alguna manera siempre volvés. " +
+      "Sos prácticamente imposible de eliminar."
+  },
+
+
+  {
+    icono: "🧙",
+
+    titulo:
+      "ERAS LA BRUJA TODO ESTE TIEMPO",
+
+    texto:
+      "Todos buscaban una explicación paranormal. " +
+      "Resulta que la explicación eras vos. " +
+      "Esperemos que uses tus poderes responsablemente."
   }
 
 ];
 
 
-/* =========================
+/* ========================================
    CAMBIAR PANTALLA
-   ========================= */
+   ======================================== */
 
-function mostrarPantalla(pantalla) {
+function mostrarPantalla(
+  pantalla
+) {
 
   document
-    .querySelectorAll(".screen")
-    .forEach(section => {
-      section.classList.remove("active");
-    });
+    .querySelectorAll(
+      ".screen"
+    )
+    .forEach(
+      section => {
 
-  pantalla.classList.add("active");
+        section
+          .classList
+          .remove(
+            "active"
+          );
+
+      }
+    );
+
+
+  pantalla
+    .classList
+    .add(
+      "active"
+    );
+
+
+  document
+    .body
+    .classList
+    .add(
+      "flash"
+    );
+
+
+  setTimeout(
+    () => {
+
+      document
+        .body
+        .classList
+        .remove(
+          "flash"
+        );
+
+    },
+    450
+  );
+
 
   window.scrollTo({
     top: 0,
@@ -164,87 +296,164 @@ function mostrarPantalla(pantalla) {
 }
 
 
-/* =========================
+/* ========================================
    ENTRAR
-   ========================= */
+   ======================================== */
 
-entrar.addEventListener("click", () => {
+entrar.addEventListener(
+  "click",
+  () => {
 
-  mostrarPantalla(invitacion);
+    mostrarPantalla(
+      invitacion
+    );
 
-});
+  }
+);
 
 
-/* =========================
+/* ========================================
    HUIR
-   ========================= */
+   ======================================== */
 
 const mensajesEscape = [
 
-  "Demasiado tarde. Ya sabemos que abriste la invitación.",
+  "¿Huir? Qué idea tan adorable... 👻",
 
-  "¿Huir? Interesante elección...",
+  "La salida acaba de desaparecer. Qué raro.",
 
-  "No deberías haber tocado ese botón.",
+  "Un fantasma desaprueba tu decisión.",
 
-  "La salida ya no está disponible.",
+  "Podés seguir intentando. Nos entretiene.",
 
-  "Podés intentarlo. Pero en las películas nunca funciona.",
+  "Bueno, basta. Vas a venir igual. 🎃",
 
-  "Algo nos dice que vas a venir igual."
+  "Tu nombre ya está en la lista. No hay vuelta atrás."
 
 ];
 
 let intentosHuir = 0;
 
-huir.addEventListener("click", () => {
 
-  const mensaje =
-    mensajesEscape[
-      intentosHuir % mensajesEscape.length
-    ];
+huir.addEventListener(
+  "click",
+  () => {
 
-  mensajeHuir.textContent = mensaje;
-
-  intentosHuir++;
-
-  huir.classList.remove("shake");
-
-  void huir.offsetWidth;
-
-  huir.classList.add("shake");
+    const mensaje =
+      mensajesEscape[
+        intentosHuir %
+        mensajesEscape.length
+      ];
 
 
-  /* Después de varios intentos cambia el botón */
+    mensajeHuir.textContent =
+      mensaje;
 
-  if (intentosHuir === 3) {
 
-    huir.textContent = "🏃 SEGUIR INTENTANDO";
+    intentosHuir++;
+
+
+    /* SACUDIR BOTÓN */
+
+    huir
+      .classList
+      .remove(
+        "shake"
+      );
+
+    void huir.offsetWidth;
+
+    huir
+      .classList
+      .add(
+        "shake"
+      );
+
+
+    /* FANTASMA */
+
+    ghostEscape
+      .classList
+      .remove(
+        "show"
+      );
+
+    void ghostEscape.offsetWidth;
+
+    ghostEscape
+      .classList
+      .add(
+        "show"
+      );
+
+
+    /* CAMBIAR TEXTO */
+
+    if (
+      intentosHuir === 3
+    ) {
+
+      huir.textContent =
+        "👻 ¿SEGUÍS INTENTANDO?";
+
+    }
+
+
+    if (
+      intentosHuir === 5
+    ) {
+
+      huir.textContent =
+        "🎃 VAS A VENIR IGUAL";
+
+    }
 
   }
-
-  if (intentosHuir === 5) {
-
-    huir.textContent = "💀 YA ES TARDE";
-
-  }
-
-});
+);
 
 
-/* =========================
-   ELEGIR DESTINO
-   ========================= */
+/* ========================================
+   DESCUBRIR DESTINO
+   ======================================== */
+
+let ultimoDestino = -1;
+
 
 function descubrirDestino() {
 
-  const numero =
-    Math.floor(
-      Math.random() * destinos.length
-    );
+  let numero;
+
+
+  /*
+    Evita que salga exactamente
+    el mismo resultado dos veces
+    seguidas.
+  */
+
+  do {
+
+    numero =
+      Math.floor(
+        Math.random() *
+        destinos.length
+      );
+
+  }
+
+  while (
+    numero ===
+    ultimoDestino &&
+    destinos.length > 1
+  );
+
+
+  ultimoDestino =
+    numero;
+
 
   const resultado =
     destinos[numero];
+
 
   destinoIcono.textContent =
     resultado.icono;
@@ -255,21 +464,26 @@ function descubrirDestino() {
   destinoTexto.textContent =
     resultado.texto;
 
-  mostrarPantalla(destino);
+
+  mostrarPantalla(
+    destino
+  );
 
 }
 
 
-/* =========================
+/* ========================================
    BOTONES DESTINO
-   ========================= */
+   ======================================== */
 
 verDestino.addEventListener(
   "click",
   descubrirDestino
 );
 
+
 otraVez.addEventListener(
   "click",
   descubrirDestino
 );
+
