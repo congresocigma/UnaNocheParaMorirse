@@ -8,23 +8,20 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <meta
-    name="theme-color"
-    content="#080808"
-  >
+  <meta name="theme-color" content="#18072d">
 
   <meta
     name="description"
     content="Has sido invitado a Una Noche Para Morirse."
   >
 
-  <title>Una Noche Para Morirse</title>
+  <title>Una Noche Para Morirse 🎃</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Creepster&family=Special+Elite&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Chewy&family=DM+Sans:wght@400;600;700;800&display=swap"
     rel="stylesheet"
   >
 
@@ -33,28 +30,59 @@
 
 <body>
 
-  <!-- Ruido / textura -->
-  <div class="noise"></div>
+  <!-- =========================
+       FONDO MÁGICO
+       ========================= -->
+
+  <div class="sky" aria-hidden="true">
+
+    <div class="stars stars-one"></div>
+    <div class="stars stars-two"></div>
+
+    <div class="moon">
+      <div class="moon-spot spot-one"></div>
+      <div class="moon-spot spot-two"></div>
+      <div class="moon-spot spot-three"></div>
+    </div>
+
+    <div class="bat bat-one">⌁</div>
+    <div class="bat bat-two">⌁</div>
+    <div class="bat bat-three">⌁</div>
+
+    <div class="cloud cloud-one"></div>
+    <div class="cloud cloud-two"></div>
+
+  </div>
+
+
+  <!-- =========================
+       CONTENIDO
+       ========================= -->
 
   <main class="container">
 
     <!-- =========================
          PANTALLA 1
          ========================= -->
+
     <section id="inicio" class="screen active">
 
-      <div class="file-card">
+      <div class="magic-card">
 
-        <p class="file-number">
-          EXPEDIENTE Nº 3010
+        <div class="top-decoration">
+          ✦ 🎃 ✦
+        </div>
+
+        <p class="eyebrow">
+          INVITACIÓN ULTRASECRETA
         </p>
 
-        <div class="stamp">
+        <div class="secret-stamp">
           CONFIDENCIAL
         </div>
 
-        <p class="warning">
-          ⚠ ACCESO RESTRINGIDO ⚠
+        <p class="mini-warning">
+          ⚠ SOLO PARA CRIATURAS INVITADAS ⚠
         </p>
 
         <h1>
@@ -62,33 +90,52 @@
           <span>PARA MORIRSE</span>
         </h1>
 
-        <div class="divider"></div>
+        <div class="magic-divider">
+          <span>✦</span>
+          <span>☾</span>
+          <span>✦</span>
+        </div>
 
         <p class="intro">
-          Tu presencia ha sido solicitada para una reunión
-          de dudosa supervivencia.
+          Algo extraño está por suceder...
         </p>
 
         <p class="subintro">
-          Juegos. Disfraces. Sospechosos.<br>
-          Y probablemente malas decisiones.
+          Una noche de juegos, disfraces,
+          comida temática y algún que otro misterio.
         </p>
+
+        <div class="date-preview">
+          <span>🎃</span>
+          <strong>30 DE OCTUBRE</strong>
+          <span>🎃</span>
+        </div>
 
         <p class="question">
           ¿Te animás a entrar?
         </p>
 
         <div class="buttons">
-          <button id="entrar" class="btn btn-red">
-            🔪 ENTRAR
+
+          <button id="entrar" class="btn btn-orange">
+            🔮 ENTRAR
           </button>
 
-          <button id="huir" class="btn btn-dark">
-            🏃 HUIR
+          <button id="huir" class="btn btn-purple">
+            👻 HUIR
           </button>
+
         </div>
 
-        <p id="mensajeHuir" class="escape-message"></p>
+        <div id="ghostEscape" class="ghost-escape" aria-hidden="true">
+          👻
+        </div>
+
+        <p
+          id="mensajeHuir"
+          class="escape-message"
+          aria-live="polite"
+        ></p>
 
       </div>
 
@@ -98,15 +145,20 @@
     <!-- =========================
          PANTALLA 2
          ========================= -->
+
     <section id="invitacion" class="screen">
 
-      <div class="file-card">
+      <div class="magic-card">
 
-        <p class="file-number">
+        <div class="top-decoration">
+          ✦ 🦇 ✦
+        </div>
+
+        <p class="eyebrow">
           ACCESO CONCEDIDO
         </p>
 
-        <div class="stamp small">
+        <div class="secret-stamp green">
           CLASIFICADO
         </div>
 
@@ -115,133 +167,214 @@
           HASTA ACÁ...
         </h2>
 
-        <p class="red-text big-text">
+        <p class="orange-text dramatic-text">
           YA ES DEMASIADO TARDE.
         </p>
 
-        <div class="divider"></div>
+        <div class="magic-divider">
+          <span>✦</span>
+          <span>☾</span>
+          <span>✦</span>
+        </div>
 
-        <div class="evidence">
 
-          <article class="evidence-item">
-            <p class="label">
-              FECHA DEL INCIDENTE
+        <!-- DATOS -->
+
+        <div class="event-grid">
+
+          <article class="event-card">
+
+            <div class="event-icon">
+              🗓️
+            </div>
+
+            <p class="event-label">
+              CUÁNDO
             </p>
 
-            <p class="value">
+            <p class="event-value">
               30 DE OCTUBRE
             </p>
+
           </article>
 
-          <article class="evidence-item">
-            <p class="label">
+
+          <article class="event-card">
+
+            <div class="event-icon">
+              🕖
+            </div>
+
+            <p class="event-label">
               HORA
             </p>
 
-            <p class="value">
+            <p class="event-value">
               19:00 HS
             </p>
+
           </article>
 
-          <article class="evidence-item full">
-            <p class="label">
+
+          <article class="event-card full">
+
+            <div class="event-icon">
+              🏚️
+            </div>
+
+            <p class="event-label">
               UBICACIÓN
             </p>
 
-            <p class="value">
-              CLASIFICADA
+            <p class="event-value">
+              AÚN BAJO ENCANTAMIENTO
             </p>
 
-            <p class="detail">
+            <p class="event-detail">
               Será revelada cuando llegue el momento.
             </p>
+
           </article>
 
-          <article class="evidence-item full danger">
-            <p class="label">
+
+          <article class="event-card full costume">
+
+            <div class="event-icon">
+              🎭
+            </div>
+
+            <p class="event-label">
               CÓDIGO DE INGRESO
             </p>
 
-            <p class="value">
-              🎭 DISFRAZ OBLIGATORIO
+            <p class="event-value">
+              DISFRAZ OBLIGATORIO
             </p>
 
-            <p class="detail">
-              Presentarse sin disfraz podría tener consecuencias.
+            <p class="event-detail">
+              Presentarse como simple mortal
+              podría tener consecuencias.
             </p>
+
           </article>
 
         </div>
-<!-- =========================
-     INFORMACIÓN CLASIFICADA
-     ========================= -->
 
-<div class="classified-info">
 
-  <p class="classified-title">
-    ⚠ INFORMACIÓN CLASIFICADA ⚠
-  </p>
+        <!-- INFORMACIÓN CLASIFICADA -->
 
-  <p class="classified-subtitle">
-    Lo que ocurra esa noche queda entre nosotros.
-  </p>
+        <div class="classified-box">
 
-  <div class="classified-list">
+          <div class="classified-header">
+            <span>✦</span>
+            INFORMACIÓN CLASIFICADA
+            <span>✦</span>
+          </div>
 
-    <div class="classified-item">
-      <span class="classified-icon">🎲</span>
+          <p class="classified-subtitle">
+            Lo que ocurra esa noche queda entre nosotros.
+          </p>
 
-      <div>
-        <p class="classified-label">JUEGOS</p>
-        <p class="classified-text">
-          Habrá juegos y desafíos durante la noche.
-          Algunos podrían poner a prueba tu capacidad
-          de supervivencia.
-        </p>
-      </div>
-    </div>
 
-    <div class="classified-item">
-      <span class="classified-icon">🩸</span>
+          <div class="classified-item">
 
-      <div>
-        <p class="classified-label">COMIDA TEMÁTICA</p>
-        <p class="classified-text">
-          Habrá comida especialmente preparada
-          para la ocasión.
-        </p>
-      </div>
-    </div>
+            <div class="classified-icon">
+              🎲
+            </div>
 
-    <div class="classified-item secret">
-      <span class="classified-icon">🤫</span>
+            <div>
+              <p class="classified-label">
+                JUEGOS
+              </p>
 
-      <div>
-        <p class="classified-label">ALTO SECRETO</p>
+              <p class="classified-text">
+                Habrá juegos y desafíos durante la noche.
+                Algunos podrían poner a prueba
+                tu capacidad de supervivencia.
+              </p>
+            </div>
 
-        <p class="classified-text">
-          Esta es una reunión pequeña y la lista
-          de invitados es reducida.
-        </p>
+          </div>
 
-        <p class="secret-warning">
-          NO REVELES QUE FUISTE INVITADO.
-        </p>
-      </div>
-    </div>
 
-  </div>
+          <div class="classified-item">
 
-</div>
-        <div class="divider"></div>
+            <div class="classified-icon">
+              🧁
+            </div>
+
+            <div>
+              <p class="classified-label">
+                COMIDA TEMÁTICA
+              </p>
+
+              <p class="classified-text">
+                El menú también fue alcanzado
+                por el espíritu de Halloween.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="classified-item secret">
+
+            <div class="classified-icon">
+              🤫
+            </div>
+
+            <div>
+
+              <p class="classified-label">
+                ENTRE MORTALES NO SE HABLA DE ESTO
+              </p>
+
+              <p class="classified-text">
+                La lista de invitados es reducida.
+              </p>
+
+              <p class="secret-warning">
+                TU INVITACIÓN ES CONFIDENCIAL.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- DESTINO -->
+
+        <div class="magic-divider">
+          <span>✦</span>
+          <span>🔮</span>
+          <span>✦</span>
+        </div>
 
         <p class="destiny-intro">
-          Antes de continuar, queda una última cosa
-          que necesitás saber...
+          Pero antes de continuar...
         </p>
 
-        <button id="verDestino" class="btn btn-red destiny-button">
-          ☠ DESCUBRÍ TU DESTINO
+        <p class="destiny-question">
+          Hay algo que el más allá
+          quiere decirte.
+        </p>
+
+
+        <button
+          id="verDestino"
+          class="crystal-button"
+        >
+
+          <span class="crystal-ball">
+            🔮
+          </span>
+
+          <span>
+            DESCUBRÍ TU DESTINO
+          </span>
+
         </button>
 
       </div>
@@ -250,58 +383,101 @@
 
 
     <!-- =========================
-         PANTALLA 3
+         PANTALLA DESTINO
          ========================= -->
+
     <section id="destino" class="screen">
 
-      <div class="file-card destiny-card">
+      <div class="magic-card destiny-card">
 
-        <p class="file-number">
-          RESULTADO DEL EXPEDIENTE
-        </p>
-
-        <p class="destiny-label">
-          EL DESTINO HA HABLADO
-        </p>
-
-        <div id="destinoIcono" class="destiny-icon">
-          💀
+        <div class="top-decoration">
+          ✦ 🔮 ✦
         </div>
 
-        <h2 id="destinoTitulo" class="destiny-title">
-        </h2>
-
-        <p id="destinoTexto" class="destiny-description">
+        <p class="eyebrow">
+          EL MÁS ALLÁ HA RESPONDIDO
         </p>
 
-        <div class="divider"></div>
+        <h2 class="destiny-heading">
+          TU DESTINO
+        </h2>
 
-        <div class="final-message">
+
+        <!-- BOLA DE CRISTAL -->
+
+        <div class="crystal-wrapper">
+
+          <div class="crystal">
+
+            <div class="crystal-shine"></div>
+
+            <div
+              id="destinoIcono"
+              class="destiny-icon"
+            >
+              💀
+            </div>
+
+          </div>
+
+          <div class="crystal-base"></div>
+
+        </div>
+
+
+        <h3
+          id="destinoTitulo"
+          class="destiny-title"
+        ></h3>
+
+        <p
+          id="destinoTexto"
+          class="destiny-description"
+        ></p>
+
+
+        <div class="magic-divider">
+          <span>✦</span>
+          <span>🎃</span>
+          <span>✦</span>
+        </div>
+
+
+        <div class="final-scroll">
 
           <p class="final-title">
-            TU DESTINO HA SIDO SELLADO.
+            ✦ TU DESTINO HA SIDO SELLADO ✦
           </p>
 
           <p>
             Nos vemos el
-            <strong>30 de octubre a las 19 hs.</strong>
+          </p>
+
+          <p class="final-date">
+            30 DE OCTUBRE · 19 HS
           </p>
 
           <p>
-            La ubicación será revelada cuando llegue el momento.
+            La ubicación será revelada
+            cuando llegue el momento.
           </p>
 
           <p class="last-warning">
             No olvides tu disfraz.
-            <br>
+            <br><br>
             Y, por las dudas...
-            <strong>no mires atrás.</strong>
+            <br>
+            <strong>NO MIRES ATRÁS.</strong>
           </p>
 
         </div>
 
-        <button id="otraVez" class="btn btn-dark">
-          ↻ TENTAR AL DESTINO OTRA VEZ
+
+        <button
+          id="otraVez"
+          class="btn btn-purple retry"
+        >
+          ✨ TENTAR AL DESTINO OTRA VEZ
         </button>
 
       </div>
@@ -309,6 +485,13 @@
     </section>
 
   </main>
+
+
+  <!-- NIEBLA -->
+
+  <div class="fog fog-one"></div>
+  <div class="fog fog-two"></div>
+
 
   <script src="script.js"></script>
 
