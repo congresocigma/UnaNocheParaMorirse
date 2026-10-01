@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="theme-color"
+    content="#080808"
+  >
+
+  <meta
+    name="description"
+    content="Has sido invitado a Una Noche Para Morirse."
+  >
+
+  <title>Una Noche Para Morirse</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Creepster&family=Special+Elite&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Ruido / textura -->
+  <div class="noise"></div>
+
+  <main class="container">
+
+    <!-- =========================
+         PANTALLA 1
+         ========================= -->
+    <section id="inicio" class="screen active">
+
+      <div class="file-card">
+
+        <p class="file-number">
+          EXPEDIENTE Nº 3010
+        </p>
+
+        <div class="stamp">
+          CONFIDENCIAL
+        </div>
+
+        <p class="warning">
+          ⚠ ACCESO RESTRINGIDO ⚠
+        </p>
+
+        <h1>
+          UNA NOCHE
+          <span>PARA MORIRSE</span>
+        </h1>
+
+        <div class="divider"></div>
+
+        <p class="intro">
+          Tu presencia ha sido solicitada para una reunión
+          de dudosa supervivencia.
+        </p>
+
+        <p class="subintro">
+          Juegos. Disfraces. Sospechosos.<br>
+          Y probablemente malas decisiones.
+        </p>
+
+        <p class="question">
+          ¿Te animás a entrar?
+        </p>
+
+        <div class="buttons">
+          <button id="entrar" class="btn btn-red">
+            🔪 ENTRAR
+          </button>
+
+          <button id="huir" class="btn btn-dark">
+            🏃 HUIR
+          </button>
+        </div>
+
+        <p id="mensajeHuir" class="escape-message"></p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PANTALLA 2
+         ========================= -->
+    <section id="invitacion" class="screen">
+
+      <div class="file-card">
+
+        <p class="file-number">
+          ACCESO CONCEDIDO
+        </p>
+
+        <div class="stamp small">
+          CLASIFICADO
+        </div>
+
+        <h2>
+          SI LLEGASTE<br>
+          HASTA ACÁ...
+        </h2>
+
+        <p class="red-text big-text">
+          YA ES DEMASIADO TARDE.
+        </p>
+
+        <div class="divider"></div>
+
+        <div class="evidence">
+
+          <article class="evidence-item">
+            <p class="label">
+              FECHA DEL INCIDENTE
+            </p>
+
+            <p class="value">
+              30 DE OCTUBRE
+            </p>
+          </article>
+
+          <article class="evidence-item">
+            <p class="label">
+              HORA
+            </p>
+
+            <p class="value">
+              19:00 HS
+            </p>
+          </article>
+
+          <article class="evidence-item full">
+            <p class="label">
+              UBICACIÓN
+            </p>
+
+            <p class="value">
+              CLASIFICADA
+            </p>
+
+            <p class="detail">
+              Será revelada cuando llegue el momento.
+            </p>
+          </article>
+
+          <article class="evidence-item full danger">
+            <p class="label">
+              CÓDIGO DE INGRESO
+            </p>
+
+            <p class="value">
+              🎭 DISFRAZ OBLIGATORIO
+            </p>
+
+            <p class="detail">
+              Presentarse sin disfraz podría tener consecuencias.
+            </p>
+          </article>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <p class="destiny-intro">
+          Antes de continuar, queda una última cosa
+          que necesitás saber...
+        </p>
+
+        <button id="verDestino" class="btn btn-red destiny-button">
+          ☠ DESCUBRÍ TU DESTINO
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PANTALLA 3
+         ========================= -->
+    <section id="destino" class="screen">
+
+      <div class="file-card destiny-card">
+
+        <p class="file-number">
+          RESULTADO DEL EXPEDIENTE
+        </p>
+
+        <p class="destiny-label">
+          EL DESTINO HA HABLADO
+        </p>
+
+        <div id="destinoIcono" class="destiny-icon">
+          💀
+        </div>
+
+        <h2 id="destinoTitulo" class="destiny-title">
+        </h2>
+
+        <p id="destinoTexto" class="destiny-description">
+        </p>
+
+        <div class="divider"></div>
+
+        <div class="final-message">
+
+          <p class="final-title">
+            TU DESTINO HA SIDO SELLADO.
+          </p>
+
+          <p>
+            Nos vemos el
+            <strong>30 de octubre a las 19 hs.</strong>
+          </p>
+
+          <p>
+            La ubicación será revelada cuando llegue el momento.
+          </p>
+
+          <p class="last-warning">
+            No olvides tu disfraz.
+            <br>
+            Y, por las dudas...
+            <strong>no mires atrás.</strong>
+          </p>
+
+        </div>
+
+        <button id="otraVez" class="btn btn-dark">
+          ↻ TENTAR AL DESTINO OTRA VEZ
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
